@@ -41,33 +41,7 @@ _Your repository must include:_
         └── normalize.css
 ```
 
-## User Stories and Feature Tasks
-
-- Continue styling the app using SMACSS practices. Take a few minutes for code review of your partner's CSS and decide how to incorporate it into your paired lab. You can choose one partner's CSS structure, or you can combine them as you see fit. Seek to optimize and organize your CSS as much as possible!
-
-*As a user, I want my app to render articles with consistent formatting so that I can visit the site often and have the same experience each time.*
-
-- Include the Handlebars.js CDN in your project to replace the `$.clone()` template.
-
-*As a developer, I want to utilize the Handlebars library to dynamically render the articles using a template so that I can easily edit the way articles are rendered.*
-
-- Convert your existing HTML template into a Handlebars template.
-- Update the `Article.prototype.toHtml()` method to utilize the Handlebars template.
-
-*As a developer, I want to utilize modern JavaScript features so that my code is up to date with industry standards.*
-
-- Refactor the functions and methods in the code to use ES6 arrow functions where applicable.
-
-### Stretch Goal
-*As a developer, I want to use Handlebars to build my filters so that my code is more DRY.*
-
-- Look at all that duplicated markup inside your `#filter` list items! Looks like a good opportunity to use a template. Make a small template for each filter, and re-render the list once you have data to populate it.
-
 ## Documentation
-_Your README.md must include:_
-
-```md
-# Templating
 
 **Author**: Yohanes / Jesus
 **Version**: 1.0.0 
@@ -76,17 +50,26 @@ _Your README.md must include:_
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code Fellows 301 class. (i.e. What's your problem domain?) -->
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1.Download repo
+2.Place in directory where it is needed
+3.place new articles in the blogArticles.js
+4.open index.html
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+HTML
+CSS
+Javascript
+
+CDN
+Handlebars
+JQuery
+
 
 ## Change Log
-<!-- Use this are to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
+12-8-2017 11:40pm - Application now publishes dynamically using JQuery and Handlebars.
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
--->
-```
+TA's: Katherine / Mike
+
+Handlebars Demo
+https://github.com/codefellows/seattle-301d26/blob/master/04-templating/demos/03-handlebars/index.html
