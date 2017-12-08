@@ -7,7 +7,7 @@ Complete [today's Kata](https://www.codewars.com/kata/simple-validation-of-a-use
 ## Lab 04 Submission Instructions
 Follow the submission instructions from Lab 01.
 
-## Resources  
+## Resources
 [Handlebars Docs](http://handlebarsjs.com/)
 
 [Arrow Functions MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
@@ -56,7 +56,7 @@ _Your repository must include:_
 
 *As a developer, I want to utilize modern JavaScript features so that my code is up to date with industry standards.*
 
-- Refactor the functions and methods in articleView.js to use ES6 arrow functions.
+- Refactor the functions and methods in the code to use ES6 arrow functions where applicable.
 
 ### Stretch Goal
 *As a developer, I want to use Handlebars to build my filters so that my code is more DRY.*
