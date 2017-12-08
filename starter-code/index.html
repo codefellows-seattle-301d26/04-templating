@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
-    <!--
-      TODO: Add a script tag to hold the Handlebars template.
-        - Be sure to give it a meaningful id attribute.
-        - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
-        - Insert placeholder keys.
-        - If your object doesn't have values you need yet, you can add those properties in the model.
-    -->
-  </head>
+
+    <article class="template" data-category="cat">
+         <header>
+           <h1>{{Title}}</h1>
+           <div class="byline">
+             By <address><a href="{{authorUrl}}">{{author}}</a></address>
+             published <time datetime="2000-01-01">{{publishedOn}}</time>
+           </div>
+         </header>
+         <section class="article-body">{{body}}</section>
+       </article>
+      </head>
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1">
@@ -37,6 +41,7 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <section id="articles" class="tab-content">
         <div>
@@ -52,7 +57,7 @@
               </select>
             </li>
           </ul>
-        </div>
+          </div>
       </section>
       <section id="about" class="tab-content">
         <header>
@@ -73,8 +78,8 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- TODO: Include Handlebars.JS from a CDN -->
-
+    <script type="text/javascript">
+    </script>https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.amd.min.js</script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
