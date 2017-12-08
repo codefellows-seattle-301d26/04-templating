@@ -21,15 +21,15 @@
     <script id="myTemplate" type="text/x-handlebars-template">
 
       <section id="articles">
-        <article class="template" data-category="cat">
+        <article data-author="{{author}}" data-category="{{category}}">
           <header>
             <h1>{{title}}</h1>
             <div class="byline">
-              By <address><a href="">{{author}}</a></address>
-              published <time datetime="2000-01-01">Publish Time</time>
+              By <address><a href="{{authorUrl}}">{{author}}</a></address>
+              <time datetime="2000-01-01">{{publishStatus}}</time>
             </div>
           </header>
-          <section class="article-body">{{body}}</section>
+          <section class="article-body">{{{body}}}</section>
         </article>
       </section>
 

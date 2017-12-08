@@ -24,8 +24,7 @@ Article.prototype.toHtml = function() {
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
   // TODO: Use the method that Handlebars gave you to return your filled-in html template for THIS article.
-  // $newArticle = template
-  $newArticle.attr('data-category', this.category);
+  return template(this);
 };
 
 // COMMENT: Why are there parentheses around "(a,b)" in the .sort() method, but not around the "articleObject" or "article" arguments in the .forEach() methods?
