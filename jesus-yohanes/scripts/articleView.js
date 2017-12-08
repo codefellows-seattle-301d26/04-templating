@@ -3,16 +3,12 @@
 let articleView = {
 
 };
-//  let articleView =>
-// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
-
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
-// PUT YOUR RESPONSE HERE
+// Arrow functions do not hold this within the function. the context of this is the window.
+//if a function used this then we did not change it to an arrow function.
 
-// original function articleView.populateFilters = function() {
   articleView.populateFilters = () => {
     $('article').each(function() {
-  // original function $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
@@ -30,8 +26,6 @@ let articleView = {
   });
 };
 
-//original function articleView.handleAuthorFilter = function() {
-
 articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
@@ -45,9 +39,8 @@ articleView.handleAuthorFilter = () => {
   });
 };
 
-// original function articleView.handleCategoryFilter = function() {
 articleView.handleCategoryFilter = () => {
-  //  original function $('#category-filter').on('change', function() {
+
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -69,7 +62,6 @@ articleView.handleMainNav = () => {
   $('.main-nav .tab:first').click();
 };
 
-//simply replace 'function' with => and place the '=>' on the other side of () like so () =>
 articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
   $('article').on('click', 'a.read-on', (e) => {
@@ -86,20 +78,10 @@ articleView.setTeasers = () => {
     }
   });
 };
-
-  $(document).ready( () => {
+$(document).ready( () => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
 });
-
-//original functions implemented to arrow method above
-// $(document).ready(function() {
-//   articleView.populateFilters();
-//   articleView.handleCategoryFilter();
-//   articleView.handleAuthorFilter();
-//   articleView.handleMainNav();
-//   articleView.setTeasers();
-// });
