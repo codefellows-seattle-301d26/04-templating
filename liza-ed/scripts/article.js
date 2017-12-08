@@ -12,7 +12,7 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  var theTemplateScript = $('#myTemp').html();
+  var theTemplateScript = $('#blogArticles').html();
   let template = Handlebars.compile(theTemplateScript)
   var theCompiledHtml = template(this);
   $('#articles').append(theCompiledHtml);
