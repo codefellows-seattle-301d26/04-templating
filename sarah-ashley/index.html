@@ -5,14 +5,15 @@
     <title>Lab 4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/normalize.css">
-    <link rel="stylesheet" href="vendor/styles/icons.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
 
-    <script id = "article-template" type = text/x-handlebars-template">
+    <script id = "article" type = text/x-handlebars-template">
+      <article id= "{{title}}" data-category="{{category}}" data-author="{{author}}">
       <header>
         <h1>{{title}}</h1>
         <h2>{{category}}</h2>
@@ -21,14 +22,15 @@
             <a href> {{author}}</a>
           </address>
             "  published "
-        <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
+            <time pubdate datetime="2000-01-01">{{publishedOn}}"</time>
         </div>
       </header>
        <section class = "article-body">{{{body}}}</section>
        <a href="#" class="read-on">Read on --</a>
+       <article>
       </script>
     <!--
-      TODO: Add a script tag to hold the Handlebars template.
+      DONE: Add a script tag to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute.
         - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
         -Insert placeholder keys.
@@ -70,7 +72,6 @@
           </ul>
         </div>
       </section>
-      <section id="articles-populate"></section>
       <section id="about" class="tab-content">
         <header>
           Welcome to my Blog
