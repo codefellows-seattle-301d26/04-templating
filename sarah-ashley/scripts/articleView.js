@@ -2,7 +2,7 @@
 
 let articleView = {};
 
-// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
+// DONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // Arrow functions take away the limited scope of 'this' in non-arrow functions. In non-arrow functions 'this' is limited to the curly brackets.
@@ -30,6 +30,7 @@ articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
+      console.log('whats this val', $(this).val() );
       $(`article[data-author="${$(this).val()}"]`).fadeIn();
     } else {
       $('article').fadeIn();
@@ -79,11 +80,9 @@ articleView.setTeasers = () => {
 };
 
 $(document).ready(function() {
-  
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
-  
 })
