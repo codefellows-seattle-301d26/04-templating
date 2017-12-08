@@ -11,25 +11,20 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
-    <!--
-      TODO: Add a script tag to hold the Handlebars template.
-        - Move your old template structure to here. Remember that this template needs to have the same structure as the old one!
-        - Insert placeholder keys.
-        - If your object doesn't have values you need yet, you can add those properties in the model.
-        is being used to change let the viewer know how long it has been since the article was published-->
-<script id="article-data" type="text/x-handlebars-template">
-    <article class="article-template" data-category={{data-category}}>
-      <header>
-        <h1>{{Title}}</h1>
-        <div class="byline">
-          By <address><a href="">{{author}}</a></address>
-          published <time datetime="2000-01-01">{{publishedOn}}</time>
-        </div>
-      </header>
-      <section class="article-body"></section>
-    </article>
-  </script>
+    <script id="article-data" type="text/x-handlebars-template">  
+      <article data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By <address><a href="">{{author}}</a></address>
+            published <time datetime="2000-01-01">{{publishedOn}}</time>
+          </div>
+        </header>
+        <section class="article-body">{{{body}}}</section>
+      </article>
+    </script>
   </head>
+  
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1">
@@ -50,7 +45,6 @@
     </header>
     <main>
       <section id="articles" class="tab-content">
-        <div id = "place-holder"></div>
         <div >
           <ul id="filters">
             <li>
@@ -66,6 +60,7 @@
           </ul>
         </div>
       </section>
+      <div id = "place-holder"></div>
       <section id="about" class="tab-content">
         <header>
           Welcome to my Blog
@@ -83,7 +78,6 @@
     <footer>
       &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="scripts/blogArticles.js"></script>
