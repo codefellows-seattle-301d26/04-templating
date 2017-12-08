@@ -5,26 +5,26 @@
     <title>Lab 4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="vendor/styles/normalize.css">
-    <link rel="stylesheet" href="vendor/styles/icons.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
-    <script id="article-data" type="text/x-handlebars-template">  
+    <script id="article-data" type="text/x-handlebars-template">
       <article data-author="{{author}}" data-category="{{category}}">
         <header>
           <h1>{{title}}</h1>
           <div class="byline">
             By <address><a href="">{{author}}</a></address>
-            published <time datetime="2000-01-01">{{publishedOn}}</time>
+            <time datetime="2000-01-01">{{publishStatus}}</time>
           </div>
         </header>
         <section class="article-body">{{{body}}}</section>
       </article>
     </script>
   </head>
-  
+
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1">
