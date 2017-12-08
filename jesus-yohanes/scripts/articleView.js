@@ -1,14 +1,18 @@
 'use strict';
 
-let articleView = {};
+let articleView = {
 
+};
+//  let articleView =>
 // TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // PUT YOUR RESPONSE HERE
 
-articleView.populateFilters = function() {
-  $('article').each(function() {
+// original function articleView.populateFilters = function() {
+  articleView.populateFilters = () => {
+    $('article').each(function() {
+  // original function $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
       let optionTag = `<option value="${val}">${val}</option>`;
@@ -26,7 +30,9 @@ articleView.populateFilters = function() {
   });
 };
 
-articleView.handleAuthorFilter = function() {
+//original function articleView.handleAuthorFilter = function() {
+
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -39,7 +45,9 @@ articleView.handleAuthorFilter = function() {
   });
 };
 
-articleView.handleCategoryFilter = function() {
+// original function articleView.handleCategoryFilter = function() {
+articleView.handleCategoryFilter = () => {
+  //  original function $('#category-filter').on('change', function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -52,7 +60,7 @@ articleView.handleCategoryFilter = function() {
   });
 };
 
-articleView.handleMainNav = function() {
+articleView.handleMainNav = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
@@ -61,9 +69,10 @@ articleView.handleMainNav = function() {
   $('.main-nav .tab:first').click();
 };
 
-articleView.setTeasers = function() {
+//simply replace 'function' with => and place the '=>' on the other side of () like so () =>
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
-  $('article').on('click', 'a.read-on', function(e) {
+  $('article').on('click', 'a.read-on', (e) => {
     e.preventDefault();
     if ($(this).text() === 'Read on →') {
       $(this).parent().find('*').fadeIn();
@@ -78,10 +87,19 @@ articleView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+  $(document).ready( () => {
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
   articleView.handleMainNav();
   articleView.setTeasers();
 });
+
+//original functions implemented to arrow method above
+// $(document).ready(function() {
+//   articleView.populateFilters();
+//   articleView.handleCategoryFilter();
+//   articleView.handleAuthorFilter();
+//   articleView.handleMainNav();
+//   articleView.setTeasers();
+// });
