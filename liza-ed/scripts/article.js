@@ -12,9 +12,9 @@ function Article (rawDataObj) {
 }
 
 Article.prototype.toHtml = function() {
-  var theTemplateScript = $('#blogArticles').html();
+  let theTemplateScript = $('#blogArticles').html();
   let template = Handlebars.compile(theTemplateScript)
-  var theCompiledHtml = template(this);
+  let theCompiledHtml = template(this);
   $('#articles').append(theCompiledHtml);
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
